@@ -1,0 +1,124 @@
+Editing API
+Route
+?
+?
+Use :param to specify a URL parameter.
+
+Example: users.json or users/:id.json
+Handler Script
+
+schema "Task"
+
+generate 100
+
+# Example
+
+# Route:    GET /users.json
+
+# Request:  GET /users.json?min_age=10&max_age=80
+
+?
+
+# Use the schema named "Users".
+
+schema "Users"
+
+?
+
+# Set min and max on the "age" field to url params.
+
+
+
+
+
+
+
+
+
+
+
+Editing API
+Route
+?
+?
+Use :param to specify a URL parameter.
+
+Example: users.json or users/:id.json
+Handler Script
+
+schema "Users"
+
+generate 100
+
+# Example
+
+# Route:    GET /users.json
+
+# Request:  GET /users.json?min_age=10&max_age=80
+
+?
+
+# Use the schema named "Users".
+
+schema "Users"
+
+?
+
+# Set min and max on the "age" field to url params.
+
+set "age", min: params['min_age'], max: params['max_age']
+
+?
+
+# Generate ten rows.
+
+generate 100
+
+Try in browser:
+https://my.api.mockaroo.com/users.json?key=76499a70
+Try with cURL:
+curl -H "X-API-Key: 76499a70" https://my.api.mockaroo.com/users.json
+entity: Hash
+A hash containing the data in the entity body of the request.
+generate(rows: integer): Array | Hash
+Generates the specified number of rows using the configured schema. Returns a Hash when rows = 1, otherwise returns an Array. If rows is omitted, the number of rows configured in the schema's settings will be used.
+header(name: String, value: String)
+Sets a response header. For example, to set content-type, use: header 'Content-Type', 'application/json'
+request_header(name: String): String
+Gets the value of a request header.
+status(code: integer)
+Overrides the default response status (200)
+params: Hash
+A hash containing the URL and query string parameters passed in on the request.
+schema(name: string)
+Sets the schema to be used when generating the response.
+set(column_name: string, param1: string, param2: string, ...)
+Sets parameters on a specific column by name. See the API Reference for a list of the parameters available for each type.
+set "age", min: params['min_age'], max: params['max_age']
+
+?
+
+# Generate ten rows.
+
+generate 100
+
+Try in browser:
+https://my.api.mockaroo.com/task.json?key=76499a70
+Try with cURL:
+curl -H "X-API-Key: 76499a70" https://my.api.mockaroo.com/task.json
+entity: Hash
+A hash containing the data in the entity body of the request.
+generate(rows: integer): Array | Hash
+Generates the specified number of rows using the configured schema. Returns a Hash when rows = 1, otherwise returns an Array. If rows is omitted, the number of rows configured in the schema's settings will be used.
+header(name: String, value: String)
+Sets a response header. For example, to set content-type, use: header 'Content-Type', 'application/json'
+request_header(name: String): String
+Gets the value of a request header.
+status(code: integer)
+Overrides the default response status (200)
+params: Hash
+A hash containing the URL and query string parameters passed in on the request.
+schema(name: string)
+Sets the schema to be used when generating the response.
+set(column_name: string, param1: string, param2: string, ...)
+Sets parameters on a specific column by name. See the API Reference for a list of the parameters available for each type.
