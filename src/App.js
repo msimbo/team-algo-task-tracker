@@ -1,15 +1,29 @@
-import './App.css';
 import SignUpPage from "./SignUpPage";
 import LogInForm from "./LogInForm";
-import AboutUsPageB from "./AboutUsPageB";
+
 import TaskCardB from "./TaskCardB";
 import DisplayAllTasks from "./DisplayAllTasks";
+
+import HeaderComponent from "./HeaderComponent";
+import FooterComponent from "./FooterComponent";
+
+{/*feature/log-in-sign-up*/}
+
+
 
 function App() {
   return(
   <div>
-      <DisplayAllTasks/>
 
+
+
+
+
+      <HeaderComponent/>
+
+
+      <SignUpPage/>
+<FooterComponent/>
 
   </div>
   );
