@@ -1,7 +1,11 @@
 import React from 'react';
+import * as PropTypes from "prop-types";
 
-//The properties in this card will be determined by that pulled from the API, This is not meant to replace
-//current work on the task card but to start getting some of the logic in place
+function TaskItem({task,deleteTask}) {
+    return;
+}
+
+TaskItem.propTypes = {deleteTask: PropTypes.func};
 const TaskCardB = ({title, description, privacy,id}) => {
 
     const deleteTask = async () => {
@@ -16,21 +20,15 @@ const TaskCardB = ({title, description, privacy,id}) => {
                 Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhicnF5d3Z1b3RydWZkenZ5ZGVuIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjQ5MjM4MTIsImV4cCI6MTk4MDQ5OTgxMn0.t8ayO5c6H2X0cZgeNkzbwtMzAkbs1xFlJeuumCboIlQ",
 
             },
-            //body: JSON.stringify(newUser)
 
 
         });
-        //const result = await response.json()
-        //setAllTaskData(result)
-        //console.log(result)
-        //return result
 
 
     }
 
 
-
-
+    let task;
     return (
         <div>
             <h1 className="justify-center flex mr-96">{title}</h1>
@@ -41,7 +39,10 @@ const TaskCardB = ({title, description, privacy,id}) => {
                     <div>
                         <p className="mt-8 ml-3">{description}</p>
                     </div>
-                    <p onClick={async () => {await deleteTask()}}>Delete</p>
+                    {/*<p onClick={async () => {await deleteTask()}}>Delete</p>*/}
+                    {/* FIRST ATTEMPT AT MAPPING the DELETE */}
+                    {task.map(task => ( <TaskItem task={task} deleteTask={deleteTask}/>
+                    ))}
                 </div>
                 <input type="checkbox"/>
             </div>
@@ -51,3 +52,22 @@ const TaskCardB = ({title, description, privacy,id}) => {
 };
 
 export default TaskCardB;
+
+
+{/*const deleteTasks = async (taskId)  => {
+
+    const { data, error } = await supabase
+            .from('services')
+            .delete()
+            .eq('id', taskId)
+
+const getAllTasks = await getTasks()
+
+    setTasks(getAllTasks)
+
+    const getTasks = async () => {
+
+        let {data: services, error} = await supabase
+            .from('services')
+    );
+    }*/}

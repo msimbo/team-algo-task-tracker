@@ -60,7 +60,7 @@ const LogInForm = () => {
                             <span>Login</span>
                         </Link>
                         <p className="text-center">Not registered yet? <Link to="/signuppage"
-                                                                          className="text-orange-400 font-medium inline-flex space-x-1 items-center"><span>Register now </span><span><svg
+                                                                          className="text-orange-400 font-medium inline-flex space-x-1 items-center"><span>Login here</span><span><svg
                             xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor"
                             strokeWidth="2">

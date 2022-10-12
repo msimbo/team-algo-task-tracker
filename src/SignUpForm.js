@@ -2,6 +2,11 @@ import React from 'react';
 import {useState} from "react";
 import {Link} from "react-router-dom";
 import image from "./images/linkedin-svgrepo-com.svg";
+import { createClient } from '@supabase/supabase-js';
+
+// Create a single supabase client for interacting with your database
+const supabase = createClient('https://xyzcompany.supabase.co', 'public-anon-key')
+
 const SignUpForm = () => {
     const [name, setName] = useState("")
     const [password, setPassword] = useState("")
@@ -108,8 +113,8 @@ const SignUpForm = () => {
                             </svg>
                             <span>Sign Up</span>
                         </button>
-                        <p className="text-center">Already a signed up? <Link to="/loginpage"
-                                                                          className="text-orange-400 font-medium inline-flex space-x-1 items-center"><span>Register now </span><span><svg
+                        <p className="text-center"> <Link to="/loginpage"
+                                                                          className="text-orange-400 font-medium inline-flex space-x-1 items-center"><span>Register here</span><span><svg
                             xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor"
                             strokeWidth="2">
