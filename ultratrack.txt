@@ -1,0 +1,20 @@
+4MSteam@lgopr0j
+
+
+https://xnieihqanftqqhtzrksz.supabase.co
+
+
+
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhuaWVpaHFhbmZ0cXFodHpya3N6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjQ5NzY3MDYsImV4cCI6MTk4MDU1MjcwNn0.apbd_xBAnexC0ICtv86QcYaWcamtKc3kEdM7Meoh9zA
+
+
+
+
+import { createClient } from '@supabase/supabase-js'
+
+
+const supabaseUrl = 'https://xnieihqanftqqhtzrksz.supabase.co'
+
+const supabaseKey = process.env.SUPABASE_KEY
+
+const supabase = createClient(supabaseUrl, supabaseKey)
